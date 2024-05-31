@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDev Artstation</title>
+    <link rel="stylesheet" href="About_Us.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <div class="list">
+                <li><a href="index.html"> <img src="icon/home.png" alt="">Home</a></li>
+                <li><a href="About_Us.html"><img src="icon/team.png" alt="">About Us</a></li>
+                <li><a href="ContactUs.html"><img src="icon/paper-plane.png" alt="">Contact Us</a></li>
+            </div>
+            <div class="Category">
+                <h3>Category</h3>
+                <li><a href="TwoDanimation.html"><img src="icon/2d.png" alt="">2D Models</a></li>
+                <li><a href="ThreeDanimation.html"><img src="icon/cube.png" alt="">3D Models</a></li>
+                <li><a href="CharacterDesign.html"><img src="icon/character-design.png" alt="">Character Designs</a></li>
+                <li><a href="EnviromentConcept.html"><img src="icon/environtment.png" alt="">Environment Concepts</a></li>
+            </div>
+        </ul>
+        <div class="GDlogo">
+            <a href="index.html"><img src="images/GameDev_Logo.png" alt="GameDev Logo" ></a>
+            
+        </div>
+    </nav>
+
+  
+
+    <!-- ika na jay bahala sa image slideshow hahaha -->
+
+    
+    <div class="main">
+        <div class="surat">
+            <br>
+            <h1>ABOUT US</h1>
+            <pre>
+       <h3>       Welcome to GameDev Artwork Station. Your premier destination to explore our extensive collection 
+       of high-quality game development art. Our platform serves as a showcase of our finest work, 
+       highlighting the talent and creativity of our team of artists and designers.
+       <br>
+       At GameDev Artwork Station, we are always excited to collaborate with innovative developers 
+       and fellow artists. If you have a project in mind or are interested in joining our team please reach 
+       out to us. Together, we can create the next generation of visually stunning games.</h3>
+            </pre>
+
+        <h1>Explore Our Portfolio</h1>
+        <pre>
+            <h3>       We invite you to explore our portfolio and discover the possibilities for your next game project. 
+       Whether you're a developer looking for inspiration or a studio in need of top-tier artwork, 
+       GameDev Artwork Station Portfolio is here to help bring your vision to life.
+    
+       Thank you for visiting GameDev Artwork Station Portfolio. 
+       We look forward to the opportunity to work with you on your next project!
+    </h3>
+        </pre>
+               
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/GameJam.jpg" style="width:100%">
+            
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="images/GameJam2.jpg" style="width:100%">
+            
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="images/GameJam3.jpg" style="width:100%">
+            
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/GameJam4.jpg" style="width:100%">
+            
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/GameJam5.jpg" style="width:100%">
+            
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <!-- Add more dots as needed -->
+        </div>
+        <!-- Add more slides as needed -->
+    
+    </div>
+    
+    <!-- The dots/circles -->
+   
+</div>
+<script>
+     const burger = document.querySelector('.burger');
+        const main = document.querySelector('.main');
+        const navLinks = document.querySelector('.nav-links');
+        
+
+        burger.addEventListener('click', () => {
+            main.classList.toggle('translate');
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            
+        });
+</script>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1} 
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block"; 
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 5 seconds
+    }
+    </script>
+    
+    
+</body>
+</html>

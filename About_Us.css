@@ -1,0 +1,287 @@
+body {
+    background-image: url('images/TryBG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #3f0a0a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+h3{
+    color: #fff3f3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+h1{
+    color:aliceblue
+}
+section {
+    margin: 20px 0;
+    position: relative;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+img{
+    width: 80%;
+    border-radius: 10%;
+}
+
+.list img{
+    width: 30px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+   filter: invert(100)
+}
+.Category img{
+    width: 20px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+   filter: invert(100)
+}
+
+
+
+
+/* styles.css */
+body, html {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+.navbar {
+min-height: 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-image: linear-gradient(to left, #434343 0%, black 100%);
+padding: 10px 20px;
+}
+
+
+
+.nav-links {
+margin-top: 70px;
+list-style: none;
+/* display: flex; */
+flex-direction: column;
+position: fixed;
+left: -100%;
+top: 0;
+height: 100vh;
+width: 50%;
+/* background-color: #c91a1a; */
+justify-content: center;
+align-items: center;
+transition: left 0.5s ease-in-out;
+padding: 10px;
+}
+
+.list{
+    margin-top: 50px;
+    /* margin-left: 110px;
+    margin-right: auto; */
+}
+
+.GDlogo{
+    width: 100px;
+    
+}
+
+.nav-links li {
+margin: 10px
+}
+
+.nav-links a {
+color: rgb(247, 247, 247);
+text-decoration: none;
+font-size: 18px;
+}
+
+.burger {
+display: none;
+cursor: pointer;
+}
+
+.burger div {
+width: 25px;
+height: 3px;
+background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+margin: 5px;
+transition: all 0.5s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 2000px) {
+
+
+
+.nav-links {
+position: fixed;
+right: -90%;
+top: 0;
+height: 91vh;
+width: 20%;
+flex-direction: column;
+background-image: linear-gradient(to left, #434343 0%, black 100%);
+justify-content: center;
+align-items: center;
+}
+
+.nav-links li {
+margin: 10px 0;
+}
+
+.burger {
+display: block;
+}
+}
+
+.nav-active {
+left: 0;
+}
+
+.toggle .line1 {
+transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+opacity: 0;
+}
+
+.toggle .line3 {
+transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.main{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 97%;
+    height: 85vh;
+   
+    /* background-color: rgb(255, 255, 255); */
+
+    display: flex;
+    justify-content: center;
+
+
+    
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+    
+}
+
+.surat {
+            text-align: justify;
+        }
+.surat {
+            text-align: justify;
+        }
+
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.translate {
+
+    transform: translateX(400px) ;
+    width: 69%;
+    height: 85vh;
+
+    
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+

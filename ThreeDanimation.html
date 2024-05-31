@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDev Artstation</title>
+    <link rel="stylesheet" href="ThreeD_Design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="BUONGLUGAR">
+
+    <nav class="navbar">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <div class="list">
+                <li><a href="index.html"> <img src="icon/home.png" alt="">Home</a></li>
+                <li><a href="About_Us.html"><img src="icon/team.png" alt="">About Us</a></li>
+                <li><a href="ContactUs.html"><img src="icon/paper-plane.png" alt="">Contact Us</a></li>
+            </div>
+            <div class="Category">
+                <h3>Category</h3>
+                <li><a href="TwoDanimation.html"><img src="icon/2d.png" alt="">2D Models</a></li>
+                <li><a href="ThreeDanimation.html"><img src="icon/cube.png" alt="">3D Models</a></li>
+                <li><a href="CharacterDesign.html"><img src="icon/character-design.png" alt="">Character Designs</a></li>
+                <li><a href="EnviromentConcept.html"><img src="icon/environtment.png" alt="">Environment Concepts</a></li>
+            </div>
+            
+        </ul>
+        
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search..." onchange="searchArt()">
+            <button type="button" onclick="searchArt()"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="GDlogo">
+            <a href="index.html"><img src="images/GameDev_Logo.png" alt="GameDev Logo" ></a>
+            
+        </div>
+    </nav>
+
+    <div class="main">
+       
+           
+        <section id="CharacterDesign">
+        <center><h1>3D Models</h1></center>
+            <div class="scroll-container">
+                <ul class="scroll-content">
+                    <li class="font" data-art="Audi R8 by Pryanex" data-img="3D Artworks/Audi R8 by Pryanex.png">
+                        Audi R8 by Pryanex
+                        <img src="3D Artworks/Audi R8 by Pryanex.png" alt="3d.png">
+                    </li>
+                    <li class="font" data-art="Female Warrior by Arcade Studios" data-img="3D Artworks/Female Warrior by Arcade Studios.png">
+                        Female Warrior by Arcade Studios
+                        <img src="3D Artworks/Female Warrior by Arcade Studios.png" alt="3d.png">
+                    </li>
+                    <li class="font" data-art="Mario Kart by Thiago Dos Santos" data-img="3D Artworks/Mario Kart by Thiago Dos Santos.jpg">
+                        Mario Kart by Thiago Dos Santos
+                        <img src="3D Artworks/Mario Kart by Thiago Dos Santos.jpg" alt="3d.png">
+                    </li>
+                    <li class="font"  data-art="Rhino Beetle by Dave Reed" data-img="3D Artworks/Rhino Beetle by Dave Reed.jpg">
+                        Rhino Beetle by Dave Reed
+                        <img src="3D Artworks/Rhino Beetle by Dave Reed.jpg" alt="3d.png">
+                    </li>
+                    <li class="font" data-art="Usman- Usman Akhund" data-img="3D Artworks/Usman- Usman Akhund.jpg">
+                        Usman- Usman Akhund
+                        <img src="3D Artworks/Usman- Usman Akhund.jpg" alt="3d.png">
+                    </li>
+                    <li class="font" data-art="Zhao by Cheryl Cai" data-img="3D Artworks/Zhao Teng Chao by Cheryl Cai.jpg">
+                        Zhao by Cheryl Cai
+                        <img src="3D Artworks/Zhao Teng Chao by Cheryl Cai.jpg" alt="3d.png">
+                    </li>
+                    </li>
+                    <li class="font" data-art="Ryu by Jason Dalton" data-img="3D Artworks/RYU by Jason Dalton.jpg">
+                        Ryu by Jason Dalton
+                       <img src="3D Artworks/RYU by Jason Dalton.jpg" alt="3d.png">
+                    </li>
+                    <li class="font" data art="3D Model by Denzel Guinoo" data-img="3D Artworks/3D Model by Denzel Guinoo.jpg">
+                        3D Model by Denzel Guinoo
+                        <img src="3D Artworks/3D Model by Denzel Guinoo.jpg" alt="3d.png">
+                    </li>
+                    <li class="font" data art="Dino Egg by Al Gonzales" data-img="3D Artworks/Dino Egg by Al Gonzales.png">
+                        Dino Egg by Al Gonzales
+                        <img src="3D Artworks/Dino Egg by Al Gonzales.png" alt="3d.png">
+                    </li>
+                </ul>
+                <button class="prev-button" onclick="scrollLeftRight('CharacterDesign', 1)">&#10094;</button>
+                <button class="next-button" onclick="scrollLeftRight('CharacterDesign', 0)">&#10095;</button>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+    <!-- Popup HTML -->
+    <div class="popup" id="popup">
+        <button class="close-btn" onclick="togglePopup()">×</button>
+        <div class="popup-content"></div>
+    </div>
+
+    <script>
+        function scrollLeftRight(sectionId, direction) {
+            const container = document.querySelector(`#${sectionId} .scroll-content`);
+            const scrollAmount = direction === 1 ? -200 : 200;
+            if (container) {
+                container.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        const burger = document.querySelector('.burger');
+        const main = document.querySelector('.main');
+        const navLinks = document.querySelector('.nav-links');
+        const popup = document.getElementById('popup');
+
+        burger.addEventListener('click', () => {
+            main.classList.toggle('translate');
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            popup.classList.toggle('popup-translate');
+        });
+
+        function togglePopup(content, imgSrc) {
+            const popup = document.getElementById('popup');
+            const popupContent = document.querySelector('.popup-content');
+            
+            if (popup.classList.contains('active')) {
+                popup.style.animation = 'popupHide 0.3s forwards';
+                setTimeout(() => {
+                    popup.classList.remove('active');
+                    popup.style.animation = '';
+                    popupContent.innerHTML = '';
+                }, 300);
+            } else {
+                if (content) {
+                    popupContent.innerHTML = `<p>${content}</p>`;
+                }
+                if (imgSrc) {
+                    popupContent.innerHTML += `<img src="${imgSrc}" alt="${content}" />`;
+                }
+                popup.classList.add('active');
+                popup.style.animation = 'popupShow 0.3s forwards';
+            }
+        }
+
+        function searchArt() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const items = document.querySelectorAll('.scroll-content li');
+            items.forEach(item => {
+                const artText = item.getAttribute('data-art').toLowerCase();
+                const imgAltText = item.querySelector('img') ? item.querySelector('img').alt.toLowerCase() : '';
+                if (artText.includes(input) || imgAltText.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        const scrollContainers = document.querySelectorAll('.scroll-container');
+
+        scrollContainers.forEach(container => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            const scrollContent = container.querySelector('.scroll-content');
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                container.classList.add('active');
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = scrollContent.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+                container.classList.remove('active');
+            });
+
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+                container.classList.remove('active');
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2;
+                scrollContent.scrollLeft = scrollLeft - walk;
+            });
+        });
+
+        const scrollItems = document.querySelectorAll('.scroll-content li');
+        scrollItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.textContent;
+                const imgSrc = item.getAttribute('data-img') ? item.getAttribute('data-img') : null;
+                togglePopup(content, imgSrc);
+            });
+        });
+    </script>
+</body>
+</html>

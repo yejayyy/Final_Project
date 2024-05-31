@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDev Artstation</title>
+    <link rel="stylesheet" href="ContactUs.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <div class="list">
+                <li><a href="index.html"> <img src="icon/home.png" alt="">Home</a></li>
+                <li><a href="About_Us.html"><img src="icon/team.png" alt="">About Us</a></li>
+                <li><a href="ContactUs.html"><img src="icon/paper-plane.png" alt="">Contact Us</a></li>
+            </div>
+            <div class="Category">
+                <h3>Category</h3>
+                <li><a href="TwoDanimation.html"><img src="icon/2d.png" alt="">2D Models</a></li>
+                <li><a href="ThreeDanimation.html"><img src="icon/cube.png" alt="">3D Models</a></li>
+                <li><a href="CharacterDesign.html"><img src="icon/character-design.png" alt="">Character Designs</a></li>
+                <li><a href="EnviromentConcept.html"><img src="icon/environtment.png" alt="">Environment Concepts</a></li>
+            </div>
+            
+        </ul>
+
+        <div class="GDlogo">
+            <a href="index.html"><img src="images/GameDev_Logo.png" alt="GameDev Logo" ></a>
+            
+        </div>
+    </nav>
+    
+    <div class="main">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>For inquiries, commissions, or collaboration opportunities, 
+please contact us using the form below:</p>
+            <form action="mailto:jayroldannavalle@gmail.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const main = document.querySelector('.main');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            main.classList.toggle('translate');
+        });
+    </script>
+</body>
+</html>
